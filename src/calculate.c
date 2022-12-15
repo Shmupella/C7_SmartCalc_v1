@@ -11,7 +11,7 @@ double calculation(queue *input_que) {
     stack *first_stack = NULL;
     while (input_que) {
         input_que = pop_q(input_que, &value, &priority, &type);
-        if (type == t_number) {
+        if (type == t_number || type == t_x) {
             first_stack = push_s(first_stack, value, priority, type);
         } else if (is_operator(type)) {
             first_stack = pop_s(first_stack, &num1, &priority, &trash_type);

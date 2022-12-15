@@ -9,7 +9,7 @@ void print_que(queue *first);
 
 int main() {
     // char str[255] = "cos(2)/*947-sin(1)+atan()^1+tan(17)*acos(0.7878)-asin(123)/sqrt(64)-ln(10)*log(123)-(-4)mod10";
-    char str[256] = "x+5";
+    char str[256] = "3/0";
     queue *output_que = NULL;
     queue *input_que = NULL;
     printf("%s\n", str);
@@ -22,7 +22,7 @@ int main() {
         print_que(output_que);
         printf("res == %.7f\n", calculation(output_que));
     }
-    printf("off result == %.7f\n", pow(24,2)-(21+9));
+    printf("off result == %.7f\n", 3/0);
     
     return 0;
 }
