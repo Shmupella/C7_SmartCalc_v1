@@ -59,7 +59,7 @@
      <font>
       <family>Didot</family>
       <pointsize>17</pointsize>
-      <bold>true</bold>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -340,7 +340,7 @@ QPushButton:pressed {
 }</string>
     </property>
     <property name="text">
-     <string>6</string>
+     <string>7</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_11">
@@ -484,7 +484,7 @@ QPushButton:pressed {
 }</string>
     </property>
     <property name="text">
-     <string>4</string>
+     <string>6</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_15">
@@ -591,7 +591,7 @@ QPushButton:pressed {
 }</string>
     </property>
     <property name="text">
-     <string>3</string>
+     <string>1</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_18">
@@ -735,7 +735,7 @@ QPushButton:pressed {
 }</string>
     </property>
     <property name="text">
-     <string>1</string>
+     <string>3</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_22">
@@ -769,7 +769,7 @@ QPushButton:pressed {
 }</string>
     </property>
     <property name="text">
-     <string>8</string>
+     <string>4</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_23">
@@ -841,7 +841,7 @@ QPushButton:pressed {
 }</string>
     </property>
     <property name="text">
-     <string>7</string>
+     <string>8</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_25">
@@ -1051,7 +1051,7 @@ QPushButton:pressed {
 	border-bottom: 1px solid gray;
 	border-bottom-right-radius: 0px;
 	border-bottom-left-radius: 0px;
-	background-color: rgb(173,200,219);
+	background-color: rgb(230,191,202);
 	color: rgb(120, 120, 120);
 }
 
