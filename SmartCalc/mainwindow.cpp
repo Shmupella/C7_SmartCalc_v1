@@ -184,13 +184,15 @@ void MainWindow::on_pushButton_sqrt_clicked()
 
 void MainWindow::on_pushButton_pow_clicked()
 {
+    check_zero(ui->input_string->text());
     ui->input_string->setText(ui->input_string->text() + "^");
 }
 
 
 void MainWindow::on_pushButton_mod_clicked()
 {
-    ui->input_string->setText(ui->input_string->text() + "mod(");
+    check_zero(ui->input_string->text());
+    ui->input_string->setText(ui->input_string->text() + "mod");
 }
 
 
@@ -229,6 +231,27 @@ void MainWindow::on_pushButton_unaryminus_clicked()
 
 void MainWindow::on_pushButton_equally_clicked()
 {
-     ui->input_string->setText(ui->input_string->text());
+    // QString xval = ui->lineEdit_x->text();
+    // long double xv = xval.toDouble();
+    QByteArray tmp = ui->input_string->text().toLocal8Bit();
+    char *src = tmp.data();
+    char *result = NULL;
+
+    result = main_calc(src, 5);
+    QString resvalue(result);
+    ui->input_string->setText(resvalue);
+
+//    if (validation(src)) {
+//        double num = 0;
+//        stack *res1 = NULL;
+//        res1 = parcing(src);
+//        res1 = polish(res1);
+//        num = calculate(res1, xv);
+//        QString resval = QString::number((double)num);
+//        ui->result->setText(resval);
+//    } else {
+//        ui->result->setText("invalid expression");
+//    }
+
 }
 

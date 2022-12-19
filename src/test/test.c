@@ -6,11 +6,15 @@ int min(int* array, int arrayLength);
 int max(int* array, int arrayLength);
 
 int main() {
-    int array[7] = {5, 10, -7, 0, 6, 16000, 16000};
-    int array_size = 7;
-    int min_num = min(array, array_size);
-    int max_num = max(array,array_size);
-    printf("min_num: %d\nmax_num: %d\n", min_num, max_num);
+    char result[256] = "Input error!";
+    double res = 0.278;
+    sprintf(result, "%f", res);
+    printf("%s\n", result);
+    // int array[7] = {5, 10, -7, 0, 6, 16000, 16000};
+    // int array_size = 7;
+    // int min_num = min(array, array_size);
+    // int max_num = max(array,array_size);
+    // printf("min_num: %d\nmax_num: %d\n", min_num, max_num);
     return 0;
 }
 
