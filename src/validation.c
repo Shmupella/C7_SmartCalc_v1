@@ -237,3 +237,14 @@ int valid_function(char *str, int *i, int *error) {
 int microvalid_function(char *str, int i) {
     return  i != 0 && !check_on_operator(str[i-1]) && !check_on_mod(str, i-1) && str[i-1] != '(';
 }
+
+int graphic_valid(double xMin, double xMax, double yMin, double yMax, double step) {
+    int error = 0;
+    if (xMin >= xMax || yMin >= yMax || step <= 0) {
+        error = 1;
+    }
+    if (xMin < -1000000 || xMax > 1000000 || yMin < -1000000 || yMax > 1000000) {
+        error = 1;
+    }
+    return error;
+}
