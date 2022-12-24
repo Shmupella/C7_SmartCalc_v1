@@ -4,16 +4,15 @@
 #include <stdlib.h>
 
 enum lexeme_type { 
-    t_open_bracket = '(', 
+    t_sin, t_sqrt,
+    t_acos, t_asin,
+    t_atan, t_ln, t_log, t_tan = 't', t_cos = 'c', 
+    t_x = 'x', t_open_bracket = '(', 
     t_close_braket = ')', 
     t_plus = '+', t_minus = '-', 
     t_mul = '*', t_div = '/', 
     t_mod = 'm', t_pow = '^', 
-    t_cos = 'c', 
-    t_sin, t_sqrt,
-    t_tan = 't', t_acos, t_asin,
-    t_atan, t_ln, t_log,
-    t_number, t_x = 'x'
+    t_number
 };
 
 typedef struct que {

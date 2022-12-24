@@ -1,6 +1,4 @@
 #include "stack.h"
-#include <stdio.h>
-
 
 stack *push_s(stack *first, double value, int priority, enum lexeme_type type) {
     stack *new_first = malloc(sizeof(stack));

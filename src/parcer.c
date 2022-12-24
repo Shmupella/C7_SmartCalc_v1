@@ -2,7 +2,7 @@
 
 queue *make_list(char *str, queue *first, double x_value) {
     int i = 0;
-    float number = 0;
+    double number = 0;
     while (str[i] != '\0') {
         switch(str[i]) {
             case t_open_bracket:
@@ -88,7 +88,7 @@ queue *make_list(char *str, queue *first, double x_value) {
                 i++;
                 break;
             default:
-                sscanf(str + i,"%f", &number);
+                sscanf(str + i,"%lf", &number);
                 first = push_q(first, number, 0, t_number);
                 i = i + num_len(str + i);
                 break;

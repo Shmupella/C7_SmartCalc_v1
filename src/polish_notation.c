@@ -1,5 +1,5 @@
 #include "polish_notation.h"
-
+#include <stdio.h>
 
 queue *polish_notation(queue *input_que) {
     queue *output_que = NULL;

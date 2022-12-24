@@ -1,4 +1,5 @@
 #include "calculate.h"
+#include <stdio.h>
 
 double calculation(queue *input_que) {
     double num1 = 0;
@@ -31,9 +32,13 @@ double calculation(queue *input_que) {
                     break;
                 case t_mod:
                     res = fmod(num2, num1);
+                    // fprintf(stderr,"res_mod == %.7f\n of_res_mod == %.7f\n", res, fmod(22.23, 3.2));
+                    // fprintf(stderr, "num2: %.7f num1: %.7f\n", num2, num1);
                     break;
                 case t_pow:
                     res = pow(num2, num1);
+                    // fprintf(stderr, "num2: %.7f num1: %.7f\n", num2, num1);
+                    // fprintf(stderr, "res == %.7f\n", res);
                     break;
             }
             first_stack = push_s(first_stack, res, 0, t_number);

@@ -1,5 +1,4 @@
 #include "validation.h"
-#include <stdio.h>
 
 int validation_str(char *str) {
     int error = 0;
@@ -16,19 +15,25 @@ int validation_str(char *str) {
             float_point = 1;
         } else if (check_on_number(str[i])) { // проверка числа
             error = number_validation(str, i);
+            // fprintf(stderr, "error in number == %d\n", error);
         } else if (check_on_operator(str[i])) { // проверка оператора
             float_point = 0;
             error = operator_validation(str, i);
+            // fprintf(stderr, "error in oper == %d\n", error);
         } else if (str[i] == 'x') { //проверка на х
             error = x_validation(str, i);
+            // fprintf(stderr, "error in x == %d\n", error);
         } else if (valid_function(str, &i, &error)) { // проверка функции
             float_point = 0;
+            // fprintf(stderr, "error in func == %d\n", error);
         } else if (check_on_mod(str, i)) { // проверка mod
             error = valid_mod(str, i);
+            // fprintf(stderr, "str[i] == %c error in mod == %d\n", str[i], error);
             i += 2;
             float_point = 0;
         } else if (str[i] != '(' && str[i] != ')') {
             error = 1;
+            // fprintf(stderr, "error in last == %d\n", error);
         }
     }
     return error;
@@ -37,11 +42,13 @@ int validation_str(char *str) {
 int valid_mod(char *str, int i) {
     int error = 0;
     int i_for_check_func = i + 3;
-    if (str[i-1] != '(' && !check_on_number(str[i-1]) && str[i-1] != 'x') {
+    if (str[i-1] != ')' && !check_on_number(str[i-1]) && str[i-1] != 'x') {
+        // fprintf(stderr, "we are in first if\n");
         error = 1;
     }
     if (str[i+3] != '(' && !check_on_number(str[i+3]) && str[i-1] != 'x' && !valid_function(str, &i_for_check_func, &error)) {
         error = 1;
+        // fprintf(stderr, "we are in 2 if\n");
     }
     return error;
 }
