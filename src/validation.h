@@ -18,6 +18,6 @@ int check_on_operator(char symbol);
 int check_on_mod(char *str, int i);
 int valid_function(char *str, int *i, int *error);
 int microvalid_function(char *str, int i);
-int graphic_valid(double xMin, double xMax, double yMin, double yMax, double step);
+int graphic_valid(double xMin, double xMax, double yMin, double yMax);
 
 #endif

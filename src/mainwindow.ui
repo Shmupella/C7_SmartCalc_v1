@@ -1224,7 +1224,7 @@ QPushButton:pressed {
      <string>x =</string>
     </property>
     <property name="alignment">
-     <set>Qt::AlignCenter</set>
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_graphic">
@@ -1314,34 +1314,6 @@ QPushButton:pressed {
  	border-style: solid;
 	border-radius: 6px;
 }</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="graphic_step">
-    <property name="geometry">
-     <rect>
-      <x>845</x>
-      <y>8</y>
-      <width>71</width>
-      <height>50</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Didot</family>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QLineEdit  {
-	border-color: gray;
- 	border-width: 1px;
- 	border-style: solid;
-	border-radius: 4px;
-	background-color: rgb(255, 248, 231);
-	color: rgb(120, 120, 120);
-}</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignBottom|Qt::AlignHCenter</set>
     </property>
    </widget>
    <widget class="QLineEdit" name="y_min">
@@ -1527,39 +1499,6 @@ QPushButton:pressed {
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="label_step">
-    <property name="geometry">
-     <rect>
-      <x>845</x>
-      <y>8</y>
-      <width>71</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Didot</family>
-      <pointsize>15</pointsize>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QLabel {
-	border-color: gray;
- 	border-width: 1px;
- 	border-style: solid;
-	border-radius: 4px;
-	background-color: rgb(255, 248, 231);
-	color: rgb(120, 120, 120);
-}</string>
-    </property>
-    <property name="text">
-     <string>step</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
    <widget class="QLineEdit" name="x_min">
     <property name="geometry">
      <rect>
@@ -1616,6 +1555,70 @@ QPushButton:pressed {
     </property>
     <property name="text">
      <string>x min</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>845</x>
+      <y>8</y>
+      <width>71</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Didot</family>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	border-color: gray;
+ 	border-width: 1px;
+ 	border-style: solid;
+	border-radius: 4px;
+	background-color: rgb(255, 248, 231);
+	color: rgb(120, 120, 120);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_ymax_2">
+    <property name="geometry">
+     <rect>
+      <x>845</x>
+      <y>8</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Didot</family>
+      <pointsize>15</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	border-color: gray;
+ 	border-width: 1px;
+ 	border-style: solid;
+	border-radius: 4px;
+	background-color: rgb(255, 248, 231);
+	color: rgb(120, 120, 120);
+}</string>
+    </property>
+    <property name="text">
+     <string>step</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>

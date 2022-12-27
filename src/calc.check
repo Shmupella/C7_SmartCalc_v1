@@ -177,3 +177,11 @@ double res = 0;
 char input_str23[256] = "*sin(0.25)";
 int error = main_calc(input_str23, 0, &res);
 ck_assert_int_eq(error, ERROR);
+
+#test valid18
+int error = graphic_valid(10, 10, -10, 10);
+ck_assert_int_eq(error, ERROR);
+
+#test valid19
+int error = graphic_valid(-10000000, 10, -10, 10);
+ck_assert_int_eq(error, ERROR);
